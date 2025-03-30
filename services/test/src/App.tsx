@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import styled from '@emotion/styled';
-import { vars } from '@fastcampus/themes';
+import { vars, classes } from '@fastcampus/themes';
 
 function App() {
   return <View />;

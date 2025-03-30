@@ -5,10 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -27,6 +24,25 @@
     <title>React App</title>
   </head>
   <body>
+    <script>
+      const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (isDarkMode) {
+        document.body.classList.add('theme-dark');
+      }
+
+      const mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+
+      mediaQueryList.addEventListener('change', e => {
+        const isDarkMode = e.matches;
+
+        if (isDarkMode) {
+          document.body.classList.add('theme-dark');
+        } else {
+          document.body.classList.remove('theme-dark');
+        }
+      });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
